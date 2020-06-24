@@ -1,0 +1,20 @@
+Dirsearch for list of urls
+
+dirsearch -e / -r -L Domains.txt -w /root/SecLists/Discovery/Web-Content/raft-large-files.txt --plain-text-report=target-paths-and-status.json -t 100
+
+
+Filter URLS with status Codes
+
+cat target-paths-and-status.json | grep 301
+
+Remove Duplicate by converting all in uppercase and sort
+
+cat filter.txt | tr "[A-Z]" "[a-z]" | sort -u
+
+Cut the URLs Columns
+
+cut -d " " -f7 bbmsales.txt
+
+Remove sepcific Text
+
+sed 's/:443//g'
