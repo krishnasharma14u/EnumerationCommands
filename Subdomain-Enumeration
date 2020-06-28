@@ -1,0 +1,13 @@
+amass enum -d domain.com -o domain.sub
+
+Resolve domains with massdns
+
+git clone https://github.com/blechschmidt/massdns.git
+cd massdns
+make
+
+/bin/massdns -r lists/resolvers.txt -t A -o S -w domain.sub
+
+Cut domains column with below command
+
+cut -d " " -f1 domains.sub | sed 's/.$//' | sort -u > domains-final.sub
