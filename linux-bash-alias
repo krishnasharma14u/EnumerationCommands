@@ -1,0 +1,16 @@
+# . /etc/bash_completion
+export PATH=$PATH:/usr/local/go/bin
+export GOPATH=$HOME/go
+export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
+
+discovery='/usr/share/SecLists/Discovery'
+alias discovery='$discovery'
+
+fuzzdb='/usr/share/fuzzdb'
+alias fuzzdb='$fuzzdb'
+
+lists='/usr/share/massdns/lists'
+alias lists='$lists'
+
+alias dirsearch='python3 /usr/share/dirsearch/dirsearch.py'
+#fi
